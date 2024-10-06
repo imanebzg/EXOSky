@@ -3,7 +3,6 @@ import { Sphere, useTexture } from '@react-three/drei';
 import { Canvas, useLoader } from '@react-three/fiber';
 
 import * as THREE from 'three';
-import image from  '../../assets/pic.jpeg'
 
 
 const CelestialObject = ({ position, color, size, name, onClick, texturePath }) => {

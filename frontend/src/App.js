@@ -1,29 +1,58 @@
-// App.js
-import React, { useState } from 'react';
-import InfoPlanet from './Components/InfoPlanet/InfoPlanet';
-import Planet from './Components/Planet/Planet';
-import PlanetScene from './Components/PlanetScene/PlanetScene';  // Import PlanetScene
+import { useState } from 'react';
 import './App.css';
+import NavBar from './Components/comon/NavBar';
+import Signup from './Components/ui/signup/Signup';
 
 function App() {
-  const [selectedObject, setSelectedObject] = useState(null);
-  const [isModalVisible, setModalVisible] = useState(false);
 
-  // Handle object click
-  const handleObjectClick = (name) => {
-    setSelectedObject(name);  // Store the name of the clicked object
-    setModalVisible(true);    // Show the modal
-  };
+   const [showSignup,setShowSignup] = useState(true)
+
+
+   const showSignupMethode = () => {
+      setShowSignup(true)
+   }
+   const hiddenSignupMethode = () => {
+    setShowSignup(false)
+ }
 
   return (
-    <div className='App'> 
-    
-      
-        {/* Render the PlanetScene component */}
-        <PlanetScene handleObjectClick={handleObjectClick} />
+    <div className='containerapp'>
+         {
+          showSignup && <div className='absol' ><Signup  onClickCancel={hiddenSignupMethode} /></div>
+         }
+       <div>
+        <NavBar  onClick={showSignupMethode} />
+       </div>
+       <main  className='appmain'>
+
+       <div className='maincontainer'>
+       <div className='title'>
+         <p>
+         SPACE
+         </p>
+         <p>
+         EXPLORATION 
+         </p>
+        </div>
+
+        <div className='description'>
+          
+          <p className='para'>
+          Join us on a journey through the cosmos, where you can discover exoplanets and their fascinating features.
+          </p>
+
+        </div>
+        
+        <div className='containerdiscover'>
+        <button className='discover'>
+         Discover Exoplanet
+         </button>
+        </div>
+
+       </div>
+       </main>
     </div>
   );
-  
 }
 
 export default App;

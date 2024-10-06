@@ -1,0 +1,46 @@
+.containercomp{
+    border: 1px solid rgba(255, 255, 255, 1); /* Bordure blanche solide */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2); /* Fond transparent avec 20% de blanc */
+    backdrop-filter: blur(2px); /* Flou de l'arrière-plan */
+    -webkit-backdrop-filter: blur(10px); /* Support pour anciens navigateurs */
+    border-radius: 10px; /* Coins arrondis */
+    height: fit-content;
+    padding: 0 1rem;
+}
+
+
+p{
+    font-family: iceland;
+    text-align: center;
+}
+
+
+.nameplanet{
+    font-size: larger;
+}
+
+.descriptionplanet{
+    font-size: medium;
+}
+
+
+.seeskybutton{
+    background-color: white;
+    border: none;
+    color: black;
+    border-radius: 12px;
+    padding: 0.5rem 2.5rem ;
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    font-size: x-large;
+    font-family: iceland
+}
+
+.test{
+     width: 150px;
+     height: 150px;
+}
+
+
