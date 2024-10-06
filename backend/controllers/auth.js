@@ -1,4 +1,4 @@
-const connection = require('../config/database'); 
+/*const connection = require('../config/database'); 
 const validator = require('validator');
 const jwt = require('jsonwebtoken'); 
 const bcrypt = require('bcryptjs'); 
@@ -37,10 +37,7 @@ exports.register = (req, res) => {
         if (!algerianPhoneRegex.test(phoneNumber)) {
             return res.status(400).json({ok: false, error : "Numéro de téléphone Algérien invalid."});
         }
-        /*
-        if (!verification) {
-            return res.render('registerpage', {message: 'Error : verification'}); 
-        }*/
+    
 
         let hashedPassword = await bcrypt.hash(password, 8); 
         connection.query('INSERT INTO companies SET ?', {company_name: companyName, email: email, password: hashedPassword, location: location, industry: industry, contact_person: contactPerson, phone_number: phoneNumber, postal_code: postalCode}, (err, result) => {
@@ -88,3 +85,4 @@ exports.login = (req, res) => {
     });
 }
 
+*/

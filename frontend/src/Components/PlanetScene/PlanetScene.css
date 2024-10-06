@@ -1,0 +1,15 @@
+.bigcontainerr{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    overflow: hidden;
+}
+.space{
+    width: 70%;
+}
+
+
+.desc{
+    display: flex;
+    flex-grow: 1;
+}
