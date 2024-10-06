@@ -127,6 +127,7 @@ function PlanetScene() {
       </div>
 
       <div className='desc'>
+         
       {isModalVisible && selectedPlanet && (
       //   <>
       //  <InfoPlanet 
@@ -135,7 +136,7 @@ function PlanetScene() {
       //     objectName={selectedPlanet.pl_name}  
       //     distance={selectedPlanet.sy_dist}    
       //   />
-
+  
         <CardPlanet  name={selectedPlanet.pl_name}  image={selectedImage}/>
        
       )}

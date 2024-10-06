@@ -4,12 +4,20 @@ import './CardPlanet.css'
 
 function CardPlanet( {image,name}) {
     return ( 
+        <div className="chmekmek">
+          
+          
+       
         <div  className="containercomp" >
-
-            <div className="planet" >
+        <div className="planet" >
             <Planet  image={image} />
             </div>
-         
+            <br/>
+            <br/>
+           <br/>
+           <br/>
+           <br/>
+            
             <p className="nameplanet">
                 {name}
             </p>
@@ -22,6 +30,7 @@ function CardPlanet( {image,name}) {
                 See the Sky 
             </button>
             <br/>
+        </div>
         </div>
      );
 }
